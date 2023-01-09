@@ -1,0 +1,31 @@
+[project]
+name = "pynotification"
+dynamic = ["version"]
+description = "Python module to trigger system notifications on Linux, Windows and macOS"
+readme = "README.md"
+authors = [{ name = "Vignesh Sivanandha Rao", email = "svignesh1793@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Development Status :: 4 - Beta",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Terminals :: Terminal Emulators/X Terminals"
+]
+keywords = ["system", "notification"]
+requires-python = ">=3"
+
+[tool.setuptools.dynamic]
+version = {attr = "notifier.version"}
+
+[build-system]
+requires      = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = ["pytest", "pre-commit"]
+
+[project.urls]
+Homepage = "https://github.com/thevickypedia/pynotification"

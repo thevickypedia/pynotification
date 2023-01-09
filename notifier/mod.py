@@ -43,7 +43,7 @@ class WindowsBalloonTip:
         self.hwnd: int = 0
 
     def run(self) -> NoReturn:
-        """Creates a window class and sends a notification."""
+        """Create a window class and sends a notification."""
         message_map = {
             win32con.WM_DESTROY: self.on_destroy,
         }
@@ -78,7 +78,7 @@ class WindowsBalloonTip:
             win32gui.DestroyWindow(self.hwnd)
 
     def notify(self) -> Union[bool, str]:
-        """Runs notification as balloon window tip.
+        """Run notification as balloon window tip.
 
         Returns:
             Union[bool, str]:

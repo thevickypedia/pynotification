@@ -2,7 +2,7 @@
 
 import logging
 import os
-from typing import NoReturn, Optional, AnyStr
+from typing import AnyStr, NoReturn, Optional
 
 from . import mod
 
@@ -42,7 +42,7 @@ def notify(title: AnyStr, message: AnyStr, debug: bool = False,
         - How the notification is displayed solely relies on the system settings.
     """
     if mod._SYSTEM == "Darwin":
-        result = os.system(f"""osascript -e 'display notification "{message}" with title "{title}"'""")
+        result = os.system("""osascript -e 'display notification "%s" with title "%s"'""" % (title, message))
         if debug is False:
             return
         if result == 0:
@@ -58,7 +58,7 @@ def notify(title: AnyStr, message: AnyStr, debug: bool = False,
         else:
             logger.error(result)
     elif mod._SYSTEM == "Linux":
-        result = os.system(f"""notify-send -t 0 '{title}' '{message}'""")
+        result = os.system("""notify-send -t 0 '%s' '%s'""" % (title, message))
         if debug is False:
             return
         if result == 0:
