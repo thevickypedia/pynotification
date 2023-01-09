@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+0.0.7 (01/09/2023)
+------------------
+- Create sphinx docs and run it as part of pre-commit
+- Bump version
+
 0.0.6 (01/09/2023)
 ------------------
 - Fix GitHub actions

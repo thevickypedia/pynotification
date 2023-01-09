@@ -4,3 +4,4 @@ __pycache__/
 .pytest_cache/
 pynotification.egg-info/
 dist/
+_build/

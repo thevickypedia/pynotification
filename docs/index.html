@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Welcome to pynotification’s documentation! &#8212; pynotification  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PyNotification" href="README.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="README.html" title="PyNotification"
+             accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">pynotification  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Welcome to pynotification’s documentation!</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="welcome-to-pynotification-s-documentation">
+<h1>Welcome to pynotification’s documentation!<a class="headerlink" href="#welcome-to-pynotification-s-documentation" title="Permalink to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Read Me:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">PyNotification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="README.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#optional-arguments">Optional arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#coding-standards">Coding Standards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#release-notes">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#linting">Linting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#pypi-package">Pypi Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#runbook">Runbook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#license-copyright">License &amp; copyright</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="pynotification">
+<h1>——–PyNotification——–<a class="headerlink" href="#pynotification" title="Permalink to this heading">¶</a></h1>
+</section>
+<section id="module-notifier.notify">
+<span id="notify"></span><h1>Notify<a class="headerlink" href="#module-notifier.notify" title="Permalink to this heading">¶</a></h1>
+<p>Module to trigger OS agnostic notifications.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="notifier.notify.default_logger">
+<span class="sig-prename descclassname"><span class="pre">notifier.notify.</span></span><span class="sig-name descname"><span class="pre">default_logger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Logger</span></span></span><a class="headerlink" href="#notifier.notify.default_logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configure default logger.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Returns the <code class="docutils literal notranslate"><span class="pre">Logger</span></code> object as an argument.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="notifier.notify.notify">
+<span class="sig-prename descclassname"><span class="pre">notifier.notify.</span></span><span class="sig-name descname"><span class="pre">notify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AnyStr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AnyStr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Logger</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">NoReturn</span></span></span><a class="headerlink" href="#notifier.notify.notify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggers a system notification.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> – Title for the notification.</p></li>
+<li><p><strong>message</strong> – Message that has to go in the notification window.</p></li>
+<li><p><strong>debug</strong> – Boolean value to show output logs.</p></li>
+<li><p><strong>logger</strong> – BYOL (bring your own logger method) to log in any defined fashion.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p>Please note that using this module doesn’t guarantee a pop-up notification.</p></li>
+<li><p>This module uses built-in tools to trigger a notification.</p></li>
+<li><p>How the notification is displayed solely relies on the system settings.</p></li>
+</ul>
+</div>
+</dd></dl>
+
+</section>
+<section id="module-notifier.mod">
+<span id="module"></span><h1>Module<a class="headerlink" href="#module-notifier.mod" title="Permalink to this heading">¶</a></h1>
+<p>Module to trigger notifications in WindowsOS, using windows binaries for API and GUI.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">WindowsNotifications</span>
+</pre></div>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="notifier.mod.WindowsBalloonTip">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">notifier.mod.</span></span><span class="sig-name descname"><span class="pre">WindowsBalloonTip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destroy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notifier.mod.WindowsBalloonTip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiates WindowsBalloonTip object as a dedicated process to trigger notification in Windows OS.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">WindowsBalloonTip</span>
+</pre></div>
+</div>
+<p>Initialize the object and assign create members for arguments received.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> – Title of the notification.</p></li>
+<li><p><strong>msg</strong> – Message for the notification.</p></li>
+<li><p><strong>destroy</strong> – Destroy notification balloon immediately.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="notifier.mod.WindowsBalloonTip.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">NoReturn</span></span></span><a class="headerlink" href="#notifier.mod.WindowsBalloonTip.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a window class and sends a notification.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notifier.mod.WindowsBalloonTip.notify">
+<span class="sig-name descname"><span class="pre">notify</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#notifier.mod.WindowsBalloonTip.notify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run notification as balloon window tip.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Returns a boolean flag if notification was successful, otherwise the error string.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Union[bool, str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notifier.mod.WindowsBalloonTip.on_destroy">
+<span class="sig-name descname"><span class="pre">on_destroy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">NoReturn</span></span></span><a class="headerlink" href="#notifier.mod.WindowsBalloonTip.on_destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destroys the notification window created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> – Arguments.</p></li>
+<li><p><strong>**kwargs</strong> – Keyword arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Keyword Arguments<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>lparam</strong> (<em>hwnd</em><em>, </em><em>msg</em><em>, </em><em>wparam</em><em>,</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Welcome to pynotification’s documentation!</a></li>
+<li><a class="reference internal" href="#pynotification">——–PyNotification——–</a></li>
+<li><a class="reference internal" href="#module-notifier.notify">Notify</a></li>
+<li><a class="reference internal" href="#module-notifier.mod">Module</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="README.html"
+                          title="next chapter">PyNotification</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="README.html" title="PyNotification"
+             >next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">pynotification  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Welcome to pynotification’s documentation!</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Vignesh Rao.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+    </div>
+  </body>
+</html>
