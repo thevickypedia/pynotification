@@ -29,3 +29,7 @@ dev = ["pytest", "pre-commit"]
 
 [project.urls]
 Homepage = "https://github.com/thevickypedia/pynotification"
+Docs = "https://thevickypedia.github.io/pynotification/"
+Source = "https://github.com/thevickypedia/pynotification"
+"Bug Tracker" = "https://github.com/thevickypedia/pynotification/issues"
+"Release Notes" = "https://github.com/thevickypedia/pynotification/blob/main/release_notes.rst"
