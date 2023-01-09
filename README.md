@@ -1,3 +1,12 @@
+**Platform Supported**
+
+![Generic badge](https://img.shields.io/badge/Platform-Linux|MacOS|Windows-1f425f.svg)
+
+**Deployments**
+
+[![pages-build-deployment](https://github.com/thevickypedia/pynotification/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/thevickypedia/pynotification/actions/workflows/pages/pages-build-deployment)
+[![pypi](https://github.com/thevickypedia/pynotification/actions/workflows/python-publish.yml/badge.svg)](https://github.com/thevickypedia/pynotification/actions/workflows/python-publish.yml)
+
 # PyNotification
 Python module to trigger system notifications on Linux, Windows and macOS
 
@@ -50,12 +59,12 @@ pre-commit run --all-files
 ## Pypi Package
 [![pypi-module](https://img.shields.io/badge/Software%20Repository-pypi-1f425f.svg)](https://packaging.python.org/tutorials/packaging-projects/)
 
-[https://pypi.org/project/jarvis-ironman/](https://pypi.org/project/jarvis-ironman/)
+[https://pypi.org/project/pynotification/](https://pypi.org/project/pynotification/)
 
 ## Runbook
 [![made-with-sphinx-doc](https://img.shields.io/badge/Code%20Docs-Sphinx-1f425f.svg)](https://www.sphinx-doc.org/en/master/man/sphinx-autogen.html)
 
-[https://thevickypedia.github.io/pynotification/](https://thevickypedia.github.io/Jarvis/)
+[https://thevickypedia.github.io/pynotification/](https://thevickypedia.github.io/pynotification/)
 
 ## License & copyright
 

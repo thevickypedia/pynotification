@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+0.0.6 (01/09/2023)
+------------------
+- Fix GitHub actions
+- Add labels in README.md
+
 0.0.5 (01/09/2023)
 ------------------
 - Add GitHub actions to build on releases
