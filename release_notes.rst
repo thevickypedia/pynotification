@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+0.0.8 (01/09/2023)
+------------------
+- Fix interchanged title and message for `macOS`
+- Update module to production ready
+
 0.0.7 (01/09/2023)
 ------------------
 - Create sphinx docs and run it as part of pre-commit

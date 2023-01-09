@@ -42,7 +42,7 @@ def notify(title: AnyStr, message: AnyStr, debug: bool = False,
         - How the notification is displayed solely relies on the system settings.
     """
     if mod._SYSTEM == "Darwin":
-        result = os.system("""osascript -e 'display notification "%s" with title "%s"'""" % (title, message))
+        result = os.system("""osascript -e 'display notification "%s" with title "%s"'""" % (message, title))
         if debug is False:
             return
         if result == 0:
