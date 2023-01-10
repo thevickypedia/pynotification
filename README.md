@@ -23,8 +23,12 @@ notify(title="Test title", message="Test message")
 ```
 
 ### Optional arguments
-- **debug**: Display logs on progress.
-- **logger**: Bring your own [`Logger`](https://docs.python.org/3/library/logging.html#logging.Logger)
+- **icon:** Custom icon to be used for `Linux` and `Windows` operating systems.
+  - Linux: Choose any [pre-defined icons](https://wiki.ubuntu.com/Artwork/BreatheIconSet/Icons) or a `.png` file as icon.
+  - Windows: Choose any `.ico` file as icon. Defaults to [notification.ico](https://github.com/thevickypedia/pynotification/tree/main/notifier/notification.ico)
+- **destroy:** Boolean value to destroy the notification box on `Windows` operating system after notifying.
+- **debug:** Display logs in the form of `info`, `warnings` and `errors` messages.
+- **logger:** Bring your own [`Logger`](https://docs.python.org/3/library/logging.html#logging.Logger) for custom logging.
 
 ## Coding Standards
 Docstring format: [`Google`](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings) <br>

@@ -84,20 +84,31 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="notifier.notify.notify">
-<span class="sig-prename descclassname"><span class="pre">notifier.notify.</span></span><span class="sig-name descname"><span class="pre">notify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AnyStr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AnyStr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Logger</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">NoReturn</span></span></span><a class="headerlink" href="#notifier.notify.notify" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">notifier.notify.</span></span><span class="sig-name descname"><span class="pre">notify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AnyStr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AnyStr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">PathLike</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Logger</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destroy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">NoReturn</span></span></span><a class="headerlink" href="#notifier.notify.notify" title="Permalink to this definition">¶</a></dt>
 <dd><p>Triggers a system notification.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>title</strong> – Title for the notification.</p></li>
 <li><p><strong>message</strong> – Message that has to go in the notification window.</p></li>
+<li><p><strong>icon</strong> – Add a custom icon for Linux or Windows OS.</p></li>
 <li><p><strong>debug</strong> – Boolean value to show output logs.</p></li>
-<li><p><strong>logger</strong> – BYOL (bring your own logger method) to log in any defined fashion.</p></li>
+<li><p><strong>logger</strong> – Bring your own logger for custom logging.</p></li>
+<li><p><strong>destroy</strong> – Destroy notification balloon immediately on Windows OS.</p></li>
 </ul>
 </dd>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p>Personalized icons for <a class="reference external" href="https://wiki.ubuntu.com/Artwork/BreatheIconSet/Icons">Linux OS</a></p></li>
+<li><p>Both Linux and Windows OS support custom icon file for notifications.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.png</span></code> for Linux</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.ico</span></code> for Windows</p></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <ul class="simple">
 <li><p>Please note that using this module doesn’t guarantee a pop-up notification.</p></li>
 <li><p>This module uses built-in tools to trigger a notification.</p></li>
@@ -115,7 +126,7 @@
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="notifier.mod.WindowsBalloonTip">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">notifier.mod.</span></span><span class="sig-name descname"><span class="pre">WindowsBalloonTip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destroy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notifier.mod.WindowsBalloonTip" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">notifier.mod.</span></span><span class="sig-name descname"><span class="pre">WindowsBalloonTip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">PathLike</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Logger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destroy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notifier.mod.WindowsBalloonTip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instantiates WindowsBalloonTip object as a dedicated process to trigger notification in Windows OS.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">WindowsBalloonTip</span>
 </pre></div>
@@ -126,6 +137,8 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>title</strong> – Title of the notification.</p></li>
 <li><p><strong>msg</strong> – Message for the notification.</p></li>
+<li><p><strong>debug</strong> – Boolean value to show output logs.</p></li>
+<li><p><strong>logger</strong> – Bring your own logger to log in any fashion.</p></li>
 <li><p><strong>destroy</strong> – Destroy notification balloon immediately.</p></li>
 </ul>
 </dd>

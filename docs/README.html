@@ -67,8 +67,15 @@
 <section id="optional-arguments">
 <h2>Optional arguments<a class="headerlink" href="#optional-arguments" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><strong>debug</strong>: Display logs on progress.</p></li>
-<li><p><strong>logger</strong>: Bring your own <a class="reference external" href="https://docs.python.org/3/library/logging.html#logging.Logger"><code class="docutils literal notranslate"><span class="pre">Logger</span></code></a></p></li>
+<li><p><strong>icon:</strong> Custom icon to be used for <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows</span></code> operating systems.</p>
+<ul>
+<li><p>Linux: Choose any <a class="reference external" href="https://wiki.ubuntu.com/Artwork/BreatheIconSet/Icons">pre-defined icons</a> or a <code class="docutils literal notranslate"><span class="pre">.png</span></code> file as icon.</p></li>
+<li><p>Windows: Choose any <code class="docutils literal notranslate"><span class="pre">.ico</span></code> file as icon. Defaults to <a class="reference external" href="https://github.com/thevickypedia/pynotification/tree/main/notifier/notification.ico">notification.ico</a></p></li>
+</ul>
+</li>
+<li><p><strong>destroy:</strong> Boolean value to destroy the notification box on <code class="docutils literal notranslate"><span class="pre">Windows</span></code> operating system after notifying.</p></li>
+<li><p><strong>debug:</strong> Display logs in the form of <code class="docutils literal notranslate"><span class="pre">info</span></code>, <code class="docutils literal notranslate"><span class="pre">warnings</span></code> and <code class="docutils literal notranslate"><span class="pre">errors</span></code> messages.</p></li>
+<li><p><strong>logger:</strong> Bring your own <a class="reference external" href="https://docs.python.org/3/library/logging.html#logging.Logger"><code class="docutils literal notranslate"><span class="pre">Logger</span></code></a> for custom logging.</p></li>
 </ul>
 </section>
 <section id="coding-standards">

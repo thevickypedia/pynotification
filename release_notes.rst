@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+0.0.9 (01/09/2023)
+------------------
+- Add options to include custom icons in notifications
+- Add OS specific dependencies in pyproject.toml
+- Bump version, update README.md and release_notes.rst
+
 0.0.8 (01/09/2023)
 ------------------
 - Fix interchanged title and message for `macOS`

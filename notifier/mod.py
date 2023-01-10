@@ -5,6 +5,7 @@
 
 """
 
+import logging
 import os
 import pathlib
 import platform
@@ -29,17 +30,29 @@ class WindowsBalloonTip:
 
     """
 
-    def __init__(self, title: str, msg: str, destroy: bool = False):
+    def __init__(self, title: str, msg: str, icon: Union[str, os.PathLike],
+                 debug: bool, logger: logging.Logger, destroy: bool):
         """Initialize the object and assign create members for arguments received.
 
         Args:
             title: Title of the notification.
             msg: Message for the notification.
+            debug: Boolean value to show output logs.
+            logger: Bring your own logger to log in any fashion.
             destroy: Destroy notification balloon immediately.
         """
         self.title = title
         self.msg = msg
         self.destroy = destroy
+        self.debug = debug
+        self.logger = logger
+        if icon and icon.endswith(".ico"):
+            self.icon = icon
+        elif icon:
+            logger.warning("'%s' is invalid, please use a '.ico' file instead" % icon) if debug else None
+            self.icon = os.path.join(pathlib.Path(__file__).parent, "notification.ico")
+        else:
+            self.icon = os.path.join(pathlib.Path(__file__).parent, "notification.ico")
         self.hwnd: int = 0
 
     def run(self) -> NoReturn:
@@ -63,10 +76,10 @@ class WindowsBalloonTip:
         # Update the Window
         win32gui.UpdateWindow(self.hwnd)
         icon_flags = win32con.LR_LOADFROMFILE | win32con.LR_DEFAULTSIZE
-        icon_path_name = os.path.join(pathlib.Path(__file__).parent, "notification.ico")
-        if os.path.isfile(icon_path_name):
-            hicon = win32gui.LoadImage(h_instance, icon_path_name, win32con.IMAGE_ICON, 0, 0, icon_flags)
+        if os.path.isfile(self.icon):
+            hicon = win32gui.LoadImage(h_instance, self.icon, win32con.IMAGE_ICON, 0, 0, icon_flags)
         else:
+            self.logger.error("'%s' is missing" % self.icon) if self.debug else None
             hicon = win32gui.LoadIcon(0, win32con.IDI_APPLICATION)
         flags = win32gui.NIF_ICON | win32gui.NIF_MESSAGE | win32gui.NIF_TIP
         nid = (self.hwnd, 0, flags, win32con.WM_USER + 20, hicon, "tooltip")
@@ -74,7 +87,7 @@ class WindowsBalloonTip:
         win32gui.Shell_NotifyIcon(win32gui.NIM_MODIFY, (self.hwnd, 0, win32gui.NIF_INFO, win32con.WM_USER + 20,
                                                         hicon, "Balloon  tooltip", self.msg, 200, self.title))
         if self.destroy:
-            time.sleep(0.5)
+            time.sleep(1)  # Even with the destroy flag, with no wait the notification may seem like it never appeared
             win32gui.DestroyWindow(self.hwnd)
 
     def notify(self) -> Union[bool, str]:

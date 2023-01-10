@@ -16,6 +16,9 @@ classifiers = [
 ]
 keywords = ["system", "notification"]
 requires-python = ">=3"
+dependencies = [
+    "pywin32; platform_system=='Windows'"
+]
 
 [tool.setuptools]
 packages = ["notifier"]
