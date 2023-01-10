@@ -1,6 +1,10 @@
 Release Notes
 =============
 
+0.1.1 (01/10/2023)
+------------------
+- Update README.md and pypi description
+
 0.1.0 (01/10/2023)
 ------------------
 - Restructure submodules and rename them to avoid conflict

@@ -8,7 +8,7 @@
 [![pypi-publish](https://github.com/thevickypedia/pynotification/actions/workflows/python-publish.yml/badge.svg)](https://github.com/thevickypedia/pynotification/actions/workflows/python-publish.yml)
 
 # PyNotification
-Python module to trigger system notifications on Linux, Windows and macOS
+Python module to trigger OS-agnostic system notifications.
 
 ### Installation
 ```shell
@@ -17,9 +17,9 @@ python -m pip install pynotification
 
 ### Usage
 ```python
-from notifier import notify
+from pynotification import pynotifier
 
-notify(title="Test title", message="Test message")
+pynotifier(title="Test title", message="Test message")
 ```
 
 ### Optional arguments

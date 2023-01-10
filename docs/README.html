@@ -49,7 +49,7 @@
 <a class="reference external" href="https://github.com/thevickypedia/pynotification/actions/workflows/python-publish.yml"><img alt="pypi-publish" src="https://github.com/thevickypedia/pynotification/actions/workflows/python-publish.yml/badge.svg" /></a></p>
 <section id="pynotification">
 <h1>PyNotification<a class="headerlink" href="#pynotification" title="Permalink to this heading">¶</a></h1>
-<p>Python module to trigger system notifications on Linux, Windows and macOS</p>
+<p>Python module to trigger OS-agnostic system notifications.</p>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pynotification
@@ -58,9 +58,9 @@
 </section>
 <section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">notifier</span> <span class="kn">import</span> <span class="n">notify</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pynotification</span> <span class="kn">import</span> <span class="n">pynotifier</span>
 
-<span class="n">notify</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Test title&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;Test message&quot;</span><span class="p">)</span>
+<span class="n">pynotifier</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Test title&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;Test message&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
