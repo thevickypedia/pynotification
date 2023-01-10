@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+0.1.0 (01/10/2023)
+------------------
+- Restructure submodules and rename them to avoid conflict
+- Add more test cases and add pypi_upload.sh for local builds
+
 0.0.9 (01/09/2023)
 ------------------
 - Add options to include custom icons in notifications

@@ -13,18 +13,15 @@ Welcome to pynotification's documentation!
    README
 
 
---------PyNotification--------
-==============================
-
-Notify
-======
-.. automodule:: notifier.notify
+PyNotification
+==============
+.. automodule:: pynotification.pynotifier
    :members:
    :undoc-members:
 
 Module
 ======
-.. automodule:: notifier.mod
+.. automodule:: pynotification.mod
    :members:
    :undoc-members:
 

@@ -21,10 +21,10 @@ dependencies = [
 ]
 
 [tool.setuptools]
-packages = ["notifier"]
+packages = ["pynotification"]
 
 [tool.setuptools.dynamic]
-version = {attr = "notifier.version"}
+version = {attr = "pynotification.version"}
 
 [build-system]
 requires      = ["setuptools", "wheel"]

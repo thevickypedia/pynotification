@@ -26,8 +26,8 @@ def default_logger() -> logging.Logger:
 
 
 # noinspection PyProtectedMember
-def notify(title: AnyStr, message: AnyStr, icon: Union[str, os.PathLike] = None,
-           debug: bool = False, logger: logging.Logger = None, destroy: bool = False) -> NoReturn:
+def pynotifier(title: AnyStr, message: AnyStr, icon: Union[str, os.PathLike] = None,
+               debug: bool = False, logger: logging.Logger = None, destroy: bool = False) -> NoReturn:
     """Triggers a system notification.
 
     Args:
