@@ -49,7 +49,7 @@
 <a class="reference external" href="https://github.com/thevickypedia/pynotification/actions/workflows/python-publish.yml"><img alt="pypi-publish" src="https://github.com/thevickypedia/pynotification/actions/workflows/python-publish.yml/badge.svg" /></a></p>
 <section id="pynotification">
 <h1>PyNotification<a class="headerlink" href="#pynotification" title="Permalink to this heading">¶</a></h1>
-<p>Python module to trigger OS-agnostic system notifications.</p>
+<p>Python module to trigger OS-agnostic notification/messagebox.</p>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pynotification
@@ -67,6 +67,7 @@
 <section id="optional-arguments">
 <h2>Optional arguments<a class="headerlink" href="#optional-arguments" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
+<li><p><strong>dialog:</strong> Boolean flag to trigger notification as a dialog in a popup window. Blocks process until user has pressed <code class="docutils literal notranslate"><span class="pre">OK</span></code></p></li>
 <li><p><strong>icon:</strong> Custom icon to be used for <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows</span></code> operating systems.</p>
 <ul>
 <li><p>Linux: Choose any <a class="reference external" href="https://wiki.ubuntu.com/Artwork/BreatheIconSet/Icons">pre-defined icons</a> or a <code class="docutils literal notranslate"><span class="pre">.png</span></code> file as icon.</p></li>

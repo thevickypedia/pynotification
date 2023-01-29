@@ -25,6 +25,12 @@ Module
    :members:
    :undoc-members:
 
+Window
+======
+.. automodule:: pynotification.window
+   :members:
+   :undoc-members:
+
 Indices and tables
 ==================
 

@@ -4,7 +4,7 @@ import logging
 import os
 from typing import AnyStr, NoReturn, Union
 
-from . import mod
+from . import mod, window
 
 
 def default_logger() -> logging.Logger:
@@ -26,13 +26,14 @@ def default_logger() -> logging.Logger:
 
 
 # noinspection PyProtectedMember
-def pynotifier(title: AnyStr, message: AnyStr, icon: Union[str, os.PathLike] = None,
+def pynotifier(title: AnyStr, message: AnyStr, dialog: bool = False, icon: Union[str, os.PathLike] = None,
                debug: bool = False, logger: logging.Logger = None, destroy: bool = False) -> NoReturn:
     """Triggers a system notification.
 
     Args:
         title: Title for the notification.
         message: Message that has to go in the notification window.
+        dialog: Boolean value to show a dialog window. Note that this will block the process.
         icon: Add a custom icon for Linux or Windows OS.
         debug: Boolean value to show output logs.
         logger: Bring your own logger for custom logging.
@@ -51,7 +52,10 @@ def pynotifier(title: AnyStr, message: AnyStr, icon: Union[str, os.PathLike] = N
     """
     if not logger:
         logger = default_logger()
+    dialog_box = window.DialogWindow(title=title, message=message, debug=debug, logger=logger)
     if mod._SYSTEM == "Darwin":
+        if dialog and dialog_box.mac_dialog():
+            return
         result = os.system("""osascript -e 'display notification "%s" with title "%s"'""" % (message, title))
         if debug is False:
             return
@@ -60,6 +64,8 @@ def pynotifier(title: AnyStr, message: AnyStr, icon: Union[str, os.PathLike] = N
         else:
             logger.error("Failed to send a notification. Code: %s" % result)
     elif mod._SYSTEM == "Windows":
+        if dialog and dialog_box.win_dialog():
+            return
         result = mod.WindowsBalloonTip(msg=message, title=title, debug=debug, logger=logger,
                                        icon=icon, destroy=destroy).notify()
         if debug is False:
@@ -69,6 +75,8 @@ def pynotifier(title: AnyStr, message: AnyStr, icon: Union[str, os.PathLike] = N
         else:
             logger.error(result)
     elif mod._SYSTEM == "Linux":
+        if dialog and dialog_box.lin_dialog():
+            return
         cmd = "notify-send -t 0 '%s' '%s'" % (title, message)
         if icon:
             cmd += " -i %s" % icon

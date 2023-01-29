@@ -8,7 +8,7 @@
 [![pypi-publish](https://github.com/thevickypedia/pynotification/actions/workflows/python-publish.yml/badge.svg)](https://github.com/thevickypedia/pynotification/actions/workflows/python-publish.yml)
 
 # PyNotification
-Python module to trigger OS-agnostic system notifications.
+Python module to trigger OS-agnostic notification/messagebox.
 
 ### Installation
 ```shell
@@ -23,6 +23,7 @@ pynotifier(title="Test title", message="Test message")
 ```
 
 ### Optional arguments
+- **dialog:** Boolean flag to trigger notification as a dialog in a popup window. Blocks process until user has pressed `OK`
 - **icon:** Custom icon to be used for `Linux` and `Windows` operating systems.
   - Linux: Choose any [pre-defined icons](https://wiki.ubuntu.com/Artwork/BreatheIconSet/Icons) or a `.png` file as icon.
   - Windows: Choose any `.ico` file as icon. Defaults to [notification.ico](https://github.com/thevickypedia/pynotification/tree/main/pynotification/notification.ico)

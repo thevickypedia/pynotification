@@ -1,6 +1,10 @@
 Release Notes
 =============
 
+0.1.2 (01/28/2023)
+------------------
+- Add a feature to notify using a popup window
+
 0.1.1 (01/10/2023)
 ------------------
 - Update README.md and pypi description
