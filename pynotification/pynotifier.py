@@ -2,7 +2,7 @@
 
 import logging
 import os
-from typing import AnyStr, NoReturn, Union
+from typing import AnyStr, Union
 
 from . import mod, window
 
@@ -27,7 +27,7 @@ def default_logger() -> logging.Logger:
 
 # noinspection PyProtectedMember
 def pynotifier(title: AnyStr, message: AnyStr, dialog: bool = False, icon: Union[str, os.PathLike] = None,
-               debug: bool = False, logger: logging.Logger = None, destroy: bool = False) -> NoReturn:
+               debug: bool = False, logger: logging.Logger = None, destroy: bool = False) -> None:
     """Triggers a system notification.
 
     Args:

@@ -10,7 +10,7 @@ import os
 import pathlib
 import platform
 import time
-from typing import NoReturn, Union
+from typing import Union
 
 _SYSTEM = platform.system()
 
@@ -55,7 +55,7 @@ class WindowsBalloonTip:
             self.icon = os.path.join(pathlib.Path(__file__).parent, "notification.ico")
         self.hwnd: int = 0
 
-    def run(self) -> NoReturn:
+    def run(self) -> None:
         """Create a window class and sends a notification."""
         message_map = {
             win32con.WM_DESTROY: self.on_destroy,
@@ -103,7 +103,7 @@ class WindowsBalloonTip:
         except Exception as error:
             return error.__str__()
 
-    def on_destroy(self, *args, **kwargs) -> NoReturn:
+    def on_destroy(self, *args, **kwargs) -> None:
         """Destroys the notification window created.
 
         Args:
