@@ -1,6 +1,10 @@
 Release Notes
 =============
 
+0.1.3 (08/29/2023)
+------------------
+- Includes some minor modifications in type hinting
+
 0.1.2 (01/28/2023)
 ------------------
 - Add a feature to notify using a popup window
